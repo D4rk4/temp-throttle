@@ -1,0 +1,13 @@
+[Unit]
+Description=CPU throttling service
+
+[Service]
+EnvironmentFile=/etc/.cpu-throttle.conf
+ExecStart=/usr/bin/temp-throttle $ARG1
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
