@@ -2,7 +2,7 @@
 Description=CPU throttling service
 
 [Service]
-EnvironmentFile=/etc/.cpu-throttle.conf
+EnvironmentFile=/etc/temp-throttle.conf
 ExecStart=/opt/scripts/temp-throttle $ARG1
 SuccessExitStatus=143
 TimeoutStopSec=10
